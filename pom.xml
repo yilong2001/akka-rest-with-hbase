@@ -10,8 +10,8 @@
 
     <properties>
         <!--  -->
-        <scala.version>2.11.8</scala.version>
-        <scala.tools.version>2.11</scala.tools.version>
+        <scala.version>2.12.3</scala.version>
+        <scala.tools.version>2.12</scala.tools.version>
         <spark.version>2.2.0</spark.version>
 
         <version.guava>11.0.2</version.guava>
@@ -153,6 +153,34 @@
             <artifactId>json</artifactId>
             <version>20171018</version>
         </dependency>
+
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.19.Final</version>
+        </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>io.netty</groupId>-->
+            <!--<artifactId>netty-common</artifactId>-->
+            <!--<version>4.1.14.Final</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>io.netty</groupId>-->
+            <!--<artifactId>netty-codec-http</artifactId>-->
+            <!--<version>4.1.14.Final</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>io.netty</groupId>-->
+            <!--<artifactId>netty-handler</artifactId>-->
+            <!--<version>4.1.14.Final</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>io.vertx</groupId>-->
+            <!--<artifactId>vertx-web-scala_${scala.tools.version}</artifactId>-->
+            <!--<version>3.5.0</version>-->
+        <!--</dependency>-->
         <!--<dependency>-->
         <!--<groupId>org.apache.spark</groupId>-->
         <!--<artifactId>spark-streaming-kafka_${scala.tools.version}</artifactId>-->

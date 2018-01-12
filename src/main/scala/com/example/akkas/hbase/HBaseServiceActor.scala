@@ -1,18 +1,12 @@
-package com.example.akka.hbase
-
-import java.util
-import java.util.Map
-import java.util.concurrent.ConcurrentHashMap
-import javax.security.auth.login.LoginContext
+package com.example.akkas.hbase
 
 import akka.actor.{Actor, Props}
-import com.example.akka.hbase.conn.{HBaseConnector, RowResource}
-import com.example.akka.models.HBaseQueryRowSpec
-import com.example.akka.utils.{KbrUtil, Serde}
+import com.example.akkaj.hbase.conn.{HBaseConnector, RowResource}
+import com.example.akkaj.utils.Serde
+import com.example.akkas.models.HBaseQueryRowSpec
 import org.apache.hadoop.conf.Configuration
-import org.apache.hadoop.hbase.client.{Connection, Table}
+import org.apache.hadoop.hbase.client.Table
 import org.apache.hadoop.hbase.rest.RowSpec
-import org.apache.hadoop.hbase.rest.model.CellSetModel
 
 /**
   * Created by yilong on 2018/1/8.

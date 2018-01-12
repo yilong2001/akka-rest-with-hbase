@@ -1,8 +1,8 @@
-package com.example.akka.auth
+package com.example.akkas.auth
 
-import com.example.akka.models.AuthData
+import com.example.akkas.models.AuthData
 
-import scala.concurrent.{ExecutionContext, Future}
+import scala.concurrent.Future
 
 /**
   * Created by yilong on 2018/1/7.

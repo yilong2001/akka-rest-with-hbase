@@ -1,10 +1,7 @@
-package com.example.akka.auth
+package com.example.akkas.auth
 
 import akka.http.scaladsl.server.Directives._
-import akka.http.scaladsl.server.{AuthorizationFailedRejection, Directive0, Directive1, Route}
-import com.example.akka.routes.AuthRoute
-
-import scala.concurrent.ExecutionContext
+import akka.http.scaladsl.server.{AuthorizationFailedRejection, Directive0, Directive1}
 
 /**
   * Created by yilong on 2018/1/8.

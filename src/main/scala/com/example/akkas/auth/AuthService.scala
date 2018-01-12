@@ -1,11 +1,9 @@
-package com.example.akka.auth
+package com.example.akkas.auth
 
-
-import sun.security.provider.MD5
 import java.security.MessageDigest
 import java.util.Base64
 
-import com.example.akka.models.UserInfo
+import com.example.akkas.models.UserInfo
 
 import scala.concurrent.{ExecutionContext, Future}
 

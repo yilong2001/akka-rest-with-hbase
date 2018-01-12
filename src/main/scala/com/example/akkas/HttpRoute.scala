@@ -1,10 +1,10 @@
-package com.example.akka
+package com.example.akkas
 
 import akka.actor.ActorRef
 import akka.http.scaladsl.server.Directives._
-import akka.http.scaladsl.server.{AuthorizationFailedRejection, Directive0, Directive1, Route}
-import com.example.akka.auth.{AuthDirectives, AuthService}
-import com.example.akka.routes.{AuthRoute, HBaseRestRoute}
+import akka.http.scaladsl.server.Route
+import com.example.akkas.auth.{AuthDirectives, AuthService}
+import com.example.akkas.routes.{AuthRoute, HBaseRestRoute}
 
 import scala.concurrent.ExecutionContext
 

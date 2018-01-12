@@ -1,21 +1,18 @@
-package com.example.akka
+package com.example.akkas
 
 import java.util.concurrent.TimeUnit
 
-import akka.actor.{ActorSystem, OneForOneStrategy}
-import akka.dispatch.sysmsg.Supervise
-import com.example.akka.hbase.HBaseServiceActor
+import akka.actor.ActorSystem
+import com.example.akkas.hbase.HBaseServiceActor
 
 /**
   * Created by yilong on 2018/1/6.
   */
 class BootSupervisor {
   import akka.actor.Props
-  import akka.pattern.Backoff
-  import akka.pattern.BackoffSupervisor
-  import scala.concurrent.duration.Duration
+  import akka.pattern.{Backoff, BackoffSupervisor}
 
-  import akka.actor.Props
+  import scala.concurrent.duration.Duration
 
   val childProps: Props = Props.create(classOf[HBaseServiceActor])
 

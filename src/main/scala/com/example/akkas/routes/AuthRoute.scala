@@ -1,11 +1,10 @@
-package com.example.akka.routes
+package com.example.akkas.routes
+
+import akka.http.scaladsl.model.StatusCodes
+import akka.http.scaladsl.server.Directives._
+import com.example.akkas.auth.AuthService
 
 import scala.concurrent.ExecutionContext
-import akka.http.scaladsl.model.StatusCodes
-
-import akka.http.scaladsl.server.Directives._
-
-import com.example.akka.auth.AuthService
 
 /**
   * Created by yilong on 2018/1/7.

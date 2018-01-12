@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 
-package com.example.akka.hbase.conn;
+package com.example.akkaj.hbase.conn;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

@@ -1,4 +1,4 @@
-package com.example.akka.utils;
+package com.example.akkaj.utils;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;

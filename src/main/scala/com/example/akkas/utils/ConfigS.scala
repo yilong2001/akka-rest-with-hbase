@@ -1,12 +1,12 @@
-package com.example.akka.utils
+package com.example.akkas.utils
 
 /**
   * Created by yilong on 2018/1/7.
   */
-import com.example.akka.models.Config
+import com.example.akkas.models.Config
 import pureconfig.loadConfig
 
-object Config {
+object ConfigS {
   def load() =
     loadConfig[Config] match {
       case Right(config) => config

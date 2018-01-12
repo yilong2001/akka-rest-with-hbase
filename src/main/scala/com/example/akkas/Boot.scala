@@ -1,17 +1,15 @@
-package com.example.akka
+package com.example.akkas
 
-import akka.http.scaladsl.Http
 import akka.actor.ActorSystem
 import akka.http.scaladsl.Http
 import akka.stream.ActorMaterializer
-import com.example.akka.auth.AuthService
-import com.example.akka.hbase.HBaseServiceActor
-import com.example.akka.utils.{Config, KbrUtil}
+import com.example.akkas.auth.AuthService
+import com.example.akkas.hbase.HBaseServiceActor
+import com.example.akkas.utils.ConfigS
 import org.apache.hadoop.hbase.HBaseConfiguration
 
 import scala.concurrent.ExecutionContext
 import scala.io.StdIn
-import scala.util.{Failure, Success}
 
 /**
   * Created by yilong on 2018/1/6.
@@ -23,7 +21,7 @@ object Boot extends App {
     implicit val executor: ExecutionContext = actorSystem.dispatcher
     implicit val materializer: ActorMaterializer = ActorMaterializer()
 
-    val config = Config.load()
+    val config = ConfigS.load()
     val conf = HBaseConfiguration.create()
 
     var loginConfPath : String = null

@@ -16,13 +16,12 @@
  * limitations under the License.
  */
 
-package com.example.akka.hbase.conn;
+package com.example.akkaj.hbase.conn;
 
-import com.example.akka.utils.KbrUtil;
+import com.example.akkaj.utils.KbrUtil;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.conf.Configuration;
-import org.apache.hadoop.hbase.HBaseConfiguration;
 import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.client.Connection;
 import org.apache.hadoop.hbase.client.ConnectionFactory;
@@ -31,8 +30,6 @@ import org.apache.hadoop.hbase.filter.ParseFilter;
 import org.apache.hadoop.security.UserGroupInformation;
 
 import javax.security.auth.Subject;
-import javax.security.auth.kerberos.KerberosPrincipal;
-import javax.security.auth.login.LoginContext;
 import java.io.IOException;
 import java.security.PrivilegedExceptionAction;
 import java.util.Map;
@@ -83,43 +80,14 @@ public class HBaseConnector implements Constants {
     } finally {
     }
 
+    if (conn == null) {
+      LOG.error("******** conn is null");
+      throw new IOException("conn is null");
+    }
+
     Table table = conn.getTable(TableName.valueOf(tableName));
     return table;
   }
-
-//  public Table getTableWithoutKbr(String user, String tableName) throws IOException {
-//    long start = System.currentTimeMillis();
-//
-//    Connection conn = null;
-//    try {
-//      conn = connections.get(user);
-//      if (conn == null || conn.isClosed() || conn.isAborted()) {
-//        conn = getConnection(user);
-//        connections.put(user, conn);
-//      }
-//    } finally {
-//    }
-//
-//    Table table = conn.getTable(TableName.valueOf(tableName));
-//    return table;
-//  }
-//
-//  public Table getTableWithKbr(LoginContext context, String user, String tableName) throws IOException {
-//    long start = System.currentTimeMillis();
-////return null;
-//    Connection conn = null;
-//    try {
-//      conn = connections.get(user);
-//      if (conn == null || conn.isClosed() || conn.isAborted()) {
-//        conn = getConnection(context, user);
-//        connections.put(user, conn);
-//      }
-//    } finally {
-//    }
-//
-//    Table table = conn.getTable(TableName.valueOf(tableName));
-//    return table;
-//  }
 
   public Configuration getConfiguration() {
     return conf;

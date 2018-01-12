@@ -1,15 +1,13 @@
-package com.example.akka.routes
+package com.example.akkas.routes
 
-import akka.event.Logging
-import akka.actor.{ActorRef, ActorSystem}
-
-import scala.concurrent.ExecutionContext
+import akka.actor.ActorRef
 import akka.http.scaladsl.model.StatusCodes
 import akka.http.scaladsl.server.Directives._
-import com.example.akka.auth.AuthService
-import com.example.akka.models.{HBaseQueryRowSpec, UserInfo}
-import org.apache.commons.logging.{Log, LogFactory}
+import com.example.akkas.auth.AuthService
+import com.example.akkas.models.HBaseQueryRowSpec
+import org.apache.commons.logging.LogFactory
 
+import scala.concurrent.ExecutionContext
 import scala.util.{Failure, Random, Success}
 
 
@@ -41,6 +39,7 @@ class HBaseRestRoute(authService : AuthService, hbaseActors : IndexedSeq[ActorRe
           //System.out.println(table, rowspec)
 
           import akka.pattern.ask
+
           import scala.concurrent.duration._
           val curId = rand.nextInt(actorNum)
           val result = hbaseActors(curId).ask(HBaseQueryRowSpec(userInfo.username, table, rowspec))(5 seconds)

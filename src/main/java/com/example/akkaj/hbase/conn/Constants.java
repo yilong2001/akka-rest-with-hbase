@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package com.example.akka.hbase.conn;
+package com.example.akkaj.hbase.conn;
 
 import org.apache.hadoop.hbase.classification.InterfaceAudience;
 import org.apache.hadoop.hbase.classification.InterfaceStability;
