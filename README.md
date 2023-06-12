@@ -17,7 +17,3 @@
 * 启用kerberos的hbase，命令：java -cp hadoopConfDir:hbaseConfDir:akkahbase-1.0-SNAPSHOT-jar-with-dependencies.jar com.example.akka.Boot jaas.conf krb5.conf KrbLogin
 
 
-###联系
-* yilong2001@126.com
-* wx:yilong2001
-
